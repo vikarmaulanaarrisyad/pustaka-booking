@@ -6,7 +6,7 @@
                 <th>#</th>
                 <th>Nama Anggota</th>
                 <th>Email</th>
-                <th>Role ID</th>
+                <!-- <th>Role ID</th> -->
                 <th>Aktif</th>
                 <th>Member Sejak</th>
             </tr>
@@ -20,9 +20,8 @@
                     <td><?= $i++; ?></td>
                     <td><?= $a['nama']; ?></td>
                     <td><?= $a['email']; ?></td>
-                    <td><?= $a['role_id']; ?></td>
                     <td><?= $a['is_active']; ?></td>
-                    <td><?= $a['tanggal_input']; ?></td>
+                    <td><?= date("d F Y", date($a['tanggal_input']));?></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
